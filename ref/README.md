@@ -1,25 +1,44 @@
 # ref 目录说明
 
-本目录存放用于文档讲解的上游源码快照，当前来源：
+本目录用于存放上游 Foundry 仓库的源码供文档讲解使用。
 
-- 仓库：https://github.com/foundry-rs/foundry
-- 版本：固定于 `foundry-575bf62c` 目录（可视为某一 commit 的快照）
-- 关注范围：`crates/anvil`（其余文件仅为上下文与许可证）
+- 上游仓库：https://github.com/foundry-rs/foundry
+- 当前固定版本：子模块 `ref/foundry-575bf62c`，Pinned 到 commit `575bf62c`
+- 主要关注范围：`crates/anvil`（其余文件仅为上下文与许可证）
 
 许可证说明：
 
-- 原仓库采用双许可证（MIT/Apache-2.0），本目录已保留 `LICENSE-MIT` 与 `LICENSE-APACHE`，并仅用于学习与文档引用。
+- 上游采用双许可证（MIT/Apache-2.0）。本仓库通过 Git Submodule 引用，遵循其原许可证，仅用于学习与文档引用。
 
-更新建议（二选一）：
+子模块使用指南（推荐）：
 
-1) 使用子模块（推荐长期维护）
+1) 获取/初始化子模块
 
-- 将 `ref/foundry-575bf62c` 切换为 Git Submodule，固定到需要的 commit。
+- 首次克隆后执行：
+	- git submodule update --init --recursive
 
-2) 使用脚本复制（轻量）
+2) 固定到指定提交（当前为 575bf62c）
 
-- 参见 `scripts/update-ref.sh`，可从本地或远端仓库复制 `crates/anvil` 到 `ref/` 下的新版本目录。
+- 子模块目录：`ref/foundry-575bf62c`
+- 切换提交：
+	- cd ref/foundry-575bf62c
+	- git checkout 575bf62c
+	- cd ../..
+- 提交子模块引用变化：
+	- git add ref/foundry-575bf62c
+	- git commit -m "chore(ref): pin foundry submodule to 575bf62c"
 
-使用约定：
+3) 升级到新的上游提交（按需）
 
-- 文档中引用源码路径时，请以 `ref/foundry-575bf62c/crates/anvil/...` 为根，确保可被检查脚本校验。
+- 在子模块目录内 checkout 目标提交，然后在主仓库提交子模块指针更新。
+- 可选更新方式：
+	- cd ref/foundry-575bf62c && git fetch --all && git checkout <new_commit>
+	- cd ../.. && git add ref/foundry-575bf62c && git commit -m "chore(ref): bump foundry submodule to <new_commit>"
+
+可选：脚本复制（不再默认）
+
+- 如需以“快照”形式复制而非子模块，参见 `scripts/update-ref.sh` 脚本，从本地或远端复制 `crates/anvil` 到 `ref/` 下新目录。
+
+文档引用约定：
+
+- 在文档中引用源码路径时，以 `ref/foundry-575bf62c/crates/anvil/...` 为根，方便校验脚本 `npm run links:check` 进行检查。
