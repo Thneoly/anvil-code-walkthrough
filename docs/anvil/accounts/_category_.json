@@ -1,0 +1,10 @@
+{
+  "label": "账户与签名",
+  "collapsed": true,
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "title": "账户、签名与 Cheatcodes",
+    "description": "账户管理、签名校验、cheatcodes 与安全边界"
+  }
+}

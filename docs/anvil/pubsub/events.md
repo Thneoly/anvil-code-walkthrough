@@ -10,6 +10,6 @@ upstream_path: crates/anvil/src/
 - 业务：`src/pubsub.rs`（含日志 `filter_logs`）
 - 通知源：`src/eth/backend/notifications.rs`
 
-示例 permalink：
+快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/pubsub.rs
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/server/src/pubsub.rs

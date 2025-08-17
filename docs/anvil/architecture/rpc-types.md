@@ -8,6 +8,6 @@ upstream_path: crates/anvil/rpc/src/
 
 `rpc/src/{lib.rs, request.rs, response.rs, error.rs}`：请求/响应/错误模型，如何被 server/handler 与 `src/eth/api.rs` 使用。
 
-示例 permalink：
+快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/rpc/src/request.rs
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/rpc/src/response.rs

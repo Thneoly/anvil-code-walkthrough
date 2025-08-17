@@ -1,0 +1,10 @@
+{
+  "label": "可观测性",
+  "collapsed": true,
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "title": "错误与可观测性",
+    "description": "错误映射、日志策略与调试断点建议"
+  }
+}

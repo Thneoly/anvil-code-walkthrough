@@ -1,0 +1,10 @@
+{
+  "label": "FAQ 与排错",
+  "collapsed": true,
+  "position": 99,
+  "link": {
+    "type": "generated-index",
+    "title": "常见问题与边界",
+    "description": "时间/出块、费用、Fork 容错、内存与并发等问题集合"
+  }
+}

@@ -6,7 +6,7 @@ upstream_repo: foundry-rs/foundry
 upstream_path: crates/anvil/src/
 ---
 
-聚焦 anvil 顶层（permalink 示例：
+聚焦 anvil 顶层（快速链接：
 https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs ，
 https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/shutdown.rs）：
 

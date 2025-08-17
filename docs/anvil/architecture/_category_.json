@@ -1,5 +1,10 @@
 {
   "label": "架构",
   "collapsed": true,
-  "position": 3
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "架构与生命周期",
+    "description": "总览与数据流、生命周期、传输与 RPC、RPC 类型"
+  }
 }

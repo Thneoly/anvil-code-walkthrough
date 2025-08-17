@@ -111,8 +111,3 @@ slug: /anvil/source-reading-plan
   - `docusaurus build`（断链失败即失败）
   - `cargo build -p anvil && cargo test -p anvil`（可选：仅跑核心用例）
   - 运行 `docs/examples` 下的示例脚本做 smoke test
-
-如需，我可以：
-- 初始化 `docs/anvil/` 的上述章节骨架与侧边栏条目
-- 提供一个最小可运行示例（含说明）并接入 GitHub Actions 流程
-- 将 `crates/anvil/ARCHITECTURE.md` 关键内容迁移/链接为架构章节首页

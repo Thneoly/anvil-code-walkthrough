@@ -1,0 +1,10 @@
+{
+  "label": "开发指南",
+  "collapsed": true,
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "title": "开发者操作指南",
+    "description": "新增 RPC、扩展后端、增加任务、配置项等操作手册"
+  }
+}

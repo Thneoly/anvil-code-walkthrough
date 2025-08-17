@@ -89,7 +89,7 @@ English README: [README.en.md](./README.en.md)
 - fork → 独立
 - rpc → 衔接 server 与 api.rs 的方法分发与返回
 
-## 🗺️ 文档交付大纲（对 docs 的建议映射）
+## 🗺️ 文档交付大纲
 
 - docs/
   - introduction.md（导论）
@@ -107,8 +107,6 @@ English README: [README.en.md](./README.en.md)
     - fork-and-snapshot.md（fork.rs 与 api 中的 reset/snapshot/revert）
   - pubsub/
     - events.md（filter/pubsub + notifications）
-
-注：当前仓库自带的 Docusaurus 示例 docs 仍保留；后续会逐步替换为上述结构（或并行维护一个新分区）。
 
 ## 🛠 运行与开发
 

@@ -8,7 +8,7 @@ upstream_path: crates/anvil/src/eth/backend/
 
 `src/eth/backend/{fork.rs, executor.rs, db.rs, env.rs, validate.rs, genesis.rs, time.rs, notifications.rs, cheats.rs}`
 
-示例 permalink：
+快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/executor.rs
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/db.rs
 - 执行：`executor.rs`

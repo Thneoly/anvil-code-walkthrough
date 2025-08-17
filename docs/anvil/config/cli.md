@@ -1,0 +1,17 @@
+---
+id: cli
+title: CLI 参数与子命令（opts/args/cmd）
+sidebar_label: CLI 与子命令
+sidebar_position: 2
+base_commit: 575bf62c
+upstream_repo: foundry-rs/foundry
+upstream_path: crates/anvil/src/
+---
+
+快速链接：
+- `src/opts.rs`, `src/args.rs`, `src/cmd.rs`
+- 入口：`crates/anvil/bin/main.rs`
+
+后续补充：
+- 常用参数与默认值清单
+- 子命令（如 `anvil` 与可能的工具子命令）

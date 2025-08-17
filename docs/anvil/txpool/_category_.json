@@ -1,5 +1,10 @@
 {
   "label": "交易池",
   "collapsed": true,
-  "position": 5
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "交易池与出块",
+    "description": "交易生命周期、优先级、打包/出块与费用规则"
+  }
 }

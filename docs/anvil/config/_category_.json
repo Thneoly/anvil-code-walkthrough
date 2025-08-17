@@ -1,0 +1,10 @@
+{
+  "label": "配置与启动",
+  "collapsed": true,
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "配置系统与启动",
+    "description": "配置来源、CLI 参数、服务装配与启动/关闭"
+  }
+}

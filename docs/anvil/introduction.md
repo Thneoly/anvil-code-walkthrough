@@ -15,5 +15,5 @@ upstream_path: crates/anvil/
 - 方法：先结构图，再实现；逐文件讲解。
 - 参考：具体路径以 README 中的“阅读计划”为准。
 
-示例 permalink：
+快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/

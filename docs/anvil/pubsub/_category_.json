@@ -1,5 +1,10 @@
 {
   "label": "发布-订阅",
   "collapsed": true,
-  "position": 7
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "title": "发布-订阅与过滤",
+    "description": "订阅主题、日志过滤、事件广播与测试定位"
+  }
 }

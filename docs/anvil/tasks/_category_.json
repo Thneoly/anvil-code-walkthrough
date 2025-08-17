@@ -1,0 +1,10 @@
+{
+  "label": "后台任务",
+  "collapsed": true,
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "title": "后台任务与调度",
+    "description": "block_listener 等任务的启动、停止与协作"
+  }
+}

@@ -1,6 +1,6 @@
 ---
 title: 总览
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: 总览
 base_commit: 575bf62c
 upstream_repo: foundry-rs/foundry
@@ -9,7 +9,7 @@ upstream_path: crates/anvil/
 
 本章给出 Anvil 的功能概览与整体架构图（节点生命周期、传输层、RPC API、EVM/状态、交易池、分叉/快照）。
 
-参考实现（GitHub permalink 示例）：
+快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/api.rs
 
