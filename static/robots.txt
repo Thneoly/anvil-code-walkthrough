@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Algolia DocSearch domain verification
+# Algolia-Crawler-Verif: 13724AD3C37DEC15
+
+# Sitemap
+Sitemap: https://thneoly.github.io/anvil-code-walkthrough/sitemap.xml

@@ -1,6 +1,13 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const appId = process.env.DOCSEARCH_APP_ID;
+const apiKey = process.env.DOCSEARCH_API_KEY;
+const indexName = process.env.DOCSEARCH_INDEX_NAME;
+const hasAlgolia = Boolean(appId && apiKey && indexName);
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -18,7 +25,8 @@ const config: Config = {
   url: 'https://thneoly.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/anvil-code-walkthrough/',
+  // Allow override in local dev: BASE_URL="/"
+  baseUrl: process.env.BASE_URL || '/anvil-code-walkthrough/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -33,7 +41,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    locales: ['zh-Hans'], // , 'en'
     localeConfigs: {
       'zh-Hans': {
         label: '简体中文',
@@ -59,6 +67,13 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+          // 忽略无关路由
+          ignorePatterns: ['/tags/**', '/blog/**'],
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -66,6 +81,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    // Global <meta> tags applied to all pages (including home)
+    metadata: [
+      { name: 'algolia-site-verification', content: '13724AD3C37DEC15' },
+    ],
     navbar: {
       title: 'Anvil 源码导读',
       logo: {
@@ -99,6 +118,17 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // Enable Algolia DocSearch only when env vars are provided
+    ...(hasAlgolia
+      ? {
+          algolia: {
+            appId: appId!,
+            apiKey: apiKey!,
+            indexName: indexName!,
+            contextualSearch: true,
+          },
+        }
+      : {}),
   } satisfies Preset.ThemeConfig,
 };
 

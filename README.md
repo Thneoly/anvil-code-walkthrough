@@ -4,7 +4,7 @@
 
 在线访问：https://thneoly.github.io/anvil-code-walkthrough/
 
-English README: ./README.en.md
+English README: [README.en.md](./README.en.md)
 
 基于 Docusaurus 的在线文档项目，聚焦对 foundry-rs/foundry 仓库中 `crates/anvil` 的核心源码进行结构化解析与讲解，帮助读者从源码层面深入理解 Anvil 的设计与实现。
 
@@ -126,16 +126,34 @@ npm install
 npm run start
 ```
 
+若本地看到图标等静态资源 404（因为 GitHub Pages 的 baseUrl），可在本地将基础路径设为根：
+
+```bash
+# 方式一：使用脚本
+npm run start:local
+
+# 方式二：临时环境变量（macOS/zsh）
+BASE_URL=/ npm run start
+
+# 方式三：使用 .env（复制 .env.example 为 .env）
+cp .env.example .env
+npm run start
+```
+
 构建静态站点：
 
 ```bash
 npm run build
+## 若希望以根路径构建（本地预览更接近 /），可用：
+npm run build:local
 ```
 
 本地预览已构建站点：
 
 ```bash
 npm run serve
+## 直接预览最新构建产物（如刚执行了 build:local）：
+npm run serve:local
 ```
 
 部署（GitHub Pages 示例，可选）：
@@ -147,6 +165,16 @@ USE_SSH=true npm run deploy
 # 或使用用户名
 GIT_USER=<your-github-username> npm run deploy
 ```
+
+### 可选：开启搜索（Algolia DocSearch）
+
+开源项目可免费申请 DocSearch 索引（https://docsearch.algolia.com/）。拿到以下配置后，写入 `.env` 即可自动启用：
+
+- DOCSEARCH_APP_ID
+- DOCSEARCH_API_KEY
+- DOCSEARCH_INDEX_NAME
+
+未配置则搜索不启用。
 
 ## 🤝 贡献
 

@@ -23,7 +23,23 @@ This project documents the core source code of `crates/anvil` (from foundry-rs/f
 ## Develop
 - Install: `npm install`
 - Start: `npm run start`
+	- If local static assets 404 due to GitHub Pages baseUrl, use:
+		- `npm run start:local` (uses BASE_URL=/)
+		- or `BASE_URL=/ npm run start`
+		- or copy `.env.example` to `.env` and run `npm run start`
 - Build: `npm run build`
+	- To build with root baseUrl for local preview: `npm run build:local`
 
 ## Deploy (CI)
 - GitHub Actions auto-builds and publishes to `gh-pages` on push to `main`.
+
+### Optional: Search (Algolia DocSearch)
+
+For open-source, you can apply for DocSearch: https://docsearch.algolia.com/
+Once you receive credentials, set these in `.env` to enable search automatically:
+
+- DOCSEARCH_APP_ID
+- DOCSEARCH_API_KEY
+- DOCSEARCH_INDEX_NAME
+
+If unset, search remains disabled.
