@@ -1,25 +1,21 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+thneoly:
+  name: Thneoly
+  title: Anvil Code Walkthrough Maintainer
+  url: https://github.com/Thneoly
+  image_url: https://github.com/Thneoly.png
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    github: Thneoly
+    x: cal0503
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+# 参考模板（按需增补更多作者）：
+# someone:
+#   name: Full Name
+#   title: Role / Affiliation
+#   url: https://example.com
+#   image_url: https://github.com/username.png
+#   page: false
+#   socials:
+#     github: username
+#     x: handle
+#     linkedin: profile

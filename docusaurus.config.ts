@@ -41,14 +41,9 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'], // , 'en'
+    locales: ['zh-Hans'],
     localeConfigs: {
-      'zh-Hans': {
-        label: '简体中文',
-      },
-      en: {
-        label: 'English',
-      },
+      'zh-Hans': { label: '简体中文' },
     },
   },
 
@@ -63,7 +58,7 @@ const config: Config = {
           editUrl:
             'https://github.com/Thneoly/anvil-code-walkthrough/edit/main/',
         },
-        blog: false,
+  blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -97,10 +92,6 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: '文档',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
         },
         {
           href: 'https://github.com/Thneoly/anvil-code-walkthrough',
