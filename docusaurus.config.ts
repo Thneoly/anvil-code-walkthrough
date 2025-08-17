@@ -59,7 +59,7 @@ const config: Config = {
             'https://github.com/Thneoly/anvil-code-walkthrough/edit/main/',
         },
   blog: false,
-        theme: {
+  theme: {
           customCss: './src/css/custom.css',
         },
         sitemap: {
@@ -121,6 +121,9 @@ const config: Config = {
         }
       : {}),
   } satisfies Preset.ThemeConfig,
+  // Enable Mermaid globally
+  markdown: { mermaid: true },
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 export default config;

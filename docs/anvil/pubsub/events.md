@@ -1,8 +1,15 @@
 ---
 title: 发布-订阅与事件流
 sidebar_position: 1
+base_commit: 575bf62c
+upstream_repo: foundry-rs/foundry
+upstream_path: crates/anvil/src/
 ---
 
 - 传输：`server/src/pubsub.rs`
 - 业务：`src/pubsub.rs`（含日志 `filter_logs`）
 - 通知源：`src/eth/backend/notifications.rs`
+
+示例 permalink：
+- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/pubsub.rs
+- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/server/src/pubsub.rs

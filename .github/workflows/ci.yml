@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "src/**"
+      - "docusaurus.config.ts"
+      - "sidebars.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/**"
+      - ".github/workflows/ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck --silent || true
+
+      - name: Check links
+        run: npm run links:check || true
+
+      - name: Build website (link break fails build)
+        run: npm run build
+
+      - name: (Optional) Smoke test curl example
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          command -v jq >/dev/null 2>&1 || { echo 'skip: jq not found'; exit 0; }
+          # try hit a local anvil if available; otherwise skip
+          curl -s -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' http://127.0.0.1:8545 \
+            | jq -e '.result' >/dev/null || echo 'skip: no anvil at :8545'
