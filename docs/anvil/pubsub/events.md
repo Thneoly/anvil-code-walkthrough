@@ -1,5 +1,6 @@
 ---
 title: 发布-订阅与事件流
+sidebar_position: 1
 ---
 
 - 传输：`server/src/pubsub.rs`

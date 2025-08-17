@@ -1,5 +1,6 @@
 ---
 title: 传输层与请求入口（Server/Handler）
+sidebar_position: 2
 ---
 
 - 独立 crate：`server/src/{lib.rs, handler.rs, config.rs, ws.rs, ipc.rs, pubsub.rs, error.rs}`

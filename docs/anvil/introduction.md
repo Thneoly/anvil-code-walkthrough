@@ -1,6 +1,8 @@
 ---
 id: introduction
 title: 导论
+sidebar_label: 导论
+sidebar_position: 1
 ---
 
 本章节说明项目目标、读者对象与阅读方式。

@@ -1,5 +1,6 @@
 ---
 title: 节点生命周期与顶层编排
+sidebar_position: 1
 ---
 
 聚焦 anvil 顶层：

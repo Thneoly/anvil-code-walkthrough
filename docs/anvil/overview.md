@@ -1,5 +1,7 @@
 ---
 title: 总览
+sidebar_position: 2
+sidebar_label: 总览
 ---
 
 本章给出 Anvil 的功能概览与整体架构图（节点生命周期、传输层、RPC API、EVM/状态、交易池、分叉/快照）。
