@@ -17,7 +17,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "ref:update": "bash scripts/update-ref.sh",
-    "links:check": "node scripts/check-links.mjs"
+    "links:check": "node scripts/check-links.mjs",
+    "mermaid:check": "node scripts/check-mermaid-labels.mjs",
+    "check": "npm run -s mermaid:check && npm run -s links:check"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
