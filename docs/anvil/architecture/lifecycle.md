@@ -6,9 +6,11 @@ upstream_repo: foundry-rs/foundry
 upstream_path: crates/anvil/src/
 ---
 
-聚焦 anvil 顶层（快速链接：
-https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs ，
-https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/shutdown.rs）：
+概述：本节梳理 anvil 顶层生命周期与服务装配路径。
+
+快速链接：
+- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs
+- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/shutdown.rs
 
 快速跳转：
 - 实现：`src/service.rs`、`src/logging.rs`、`src/shutdown.rs`

@@ -1,6 +1,6 @@
 ---
 title: 总览
-sidebar_position: 3
+sidebar_position: 2
 sidebar_label: 总览
 base_commit: 575bf62c
 upstream_repo: foundry-rs/foundry
@@ -56,11 +56,17 @@ flowchart LR
 
 快速验证：见 示例 → curl: eth_chainId。
 
-后续章节将逐一映射到真实源码目录：
-- 顶层编排：`src/{lib.rs, args.rs, opts.rs, cmd.rs, config.rs, service.rs, shutdown.rs, logging.rs, tasks/}`
-- 传输/请求入口：`server/src/*` 与 `src/server/*`
-- RPC 类型：`rpc/src/*`
-- EVM/状态：`src/evm.rs` 与 `src/eth/backend/*`
+后续章节将逐一映射到真实源码目录（与左侧目录一致）：
+- 配置与启动：`src/{config.rs, opts.rs, args.rs, cmd.rs, service.rs, shutdown.rs, logging.rs}`
+- 架构（生命周期/传输/RPC 类型）：
+	- 传输/请求入口：`server/src/*` 与 `src/server/*`
+	- RPC 类型：`rpc/src/*`
+- EVM 与状态：`src/evm.rs` 与 `src/eth/backend/*`
 - 交易池：`src/eth/pool/*`
-- 分叉/快照：`src/eth/backend/fork.rs` + `src/eth/api.rs`
+- 分叉与快照：`src/eth/backend/fork.rs` + `src/eth/api.rs`
 - 发布-订阅：`src/pubsub.rs` + `src/eth/backend/notifications.rs`
+- 账户与签名：`src/eth/sign.rs`
+- 后台任务：`src/tasks/*`
+- 可观测性：`src/logging.rs`、`rpc/src/error.rs`、`server/src/error.rs`、`src/eth/error.rs`
+- 开发指南：新增 RPC/后端扩展/后台任务等操作路径
+- FAQ 与排错：常见边界与排错清单
