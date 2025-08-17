@@ -9,13 +9,5 @@ upstream_path: crates/anvil/src/
 概述：本节梳理 anvil 顶层生命周期与服务装配路径。
 
 快速链接：
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/shutdown.rs
-
-快速跳转：
-- 实现：`src/service.rs`、`src/logging.rs`、`src/shutdown.rs`
-- 服务器整合：`src/server/{mod.rs, handler.rs, error.rs}`
-- 测试示例：`crates/anvil/tests/it/api.rs`
-- 入口与配置：`src/{lib.rs, args.rs, opts.rs, cmd.rs, config.rs}`
-- 服务/任务：`src/{service.rs, shutdown.rs, logging.rs, tasks/}`
-- 服务器模块：`src/server/{mod.rs, handler.rs, error.rs}` 与独立 crate `server/src/*` 的职责对比
+- 源码（service）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs
+- 源码（shutdown）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/shutdown.rs

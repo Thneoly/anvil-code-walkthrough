@@ -18,9 +18,3 @@ upstream_path: crates/anvil/src/eth/miner.rs
 后续补充：
 - 出块流程图（Mermaid）
 - 候选选择/打包规则与边界
-
-快速跳转：
-- 交易池设计：`/anvil/txpool/design`
-- 费用与硬分叉：`/anvil/txpool/fees-hardfork`
-- Backend 执行：`/anvil/evm/backend`
-- 可观测性：`/anvil/observability/errors-and-logging`

@@ -10,8 +10,8 @@ upstream_path: crates/anvil/
 本章给出 Anvil 的功能概览与整体架构图（节点生命周期、传输层、RPC API、EVM/状态、交易池、分叉/快照）。
 
 快速链接：
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/api.rs
+- 源码（service）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/service.rs
+- 源码（eth/api）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/api.rs
 
 ```mermaid
 flowchart LR
@@ -56,7 +56,7 @@ flowchart LR
 
 快速验证：见 示例 → curl: eth_chainId。
 
-后续章节将逐一映射到真实源码目录（与左侧目录一致）：
+后续章节将逐一映射到真实源码目录：
 - 配置与启动：`src/{config.rs, opts.rs, args.rs, cmd.rs, service.rs, shutdown.rs, logging.rs}`
 - 架构（生命周期/传输/RPC 类型）：
 	- 传输/请求入口：`server/src/*` 与 `src/server/*`

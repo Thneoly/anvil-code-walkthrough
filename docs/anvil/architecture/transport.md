@@ -13,11 +13,5 @@ upstream_path: crates/anvil/server/src/
 - 关系：传输适配、路由入口、与 API 层的衔接
 
 快速链接：
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/server/src/handler.rs
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/server/handler.rs
-
-快速跳转：
-- RPC 类型：`/anvil/architecture/rpc-types`
-- 以太坊 API：`/anvil/overview` → `src/eth/api.rs`
-- 事件流：`/anvil/pubsub/events`
-- 测试示例：`crates/anvil/tests/it/{wsapi.rs,api.rs}`
+- 源码（server/handler）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/server/src/handler.rs
+- 源码（src/server/handler）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/server/handler.rs

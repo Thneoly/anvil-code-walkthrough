@@ -9,17 +9,11 @@ upstream_path: crates/anvil/src/eth/backend/
 `src/eth/backend/{fork.rs, executor.rs, db.rs, env.rs, validate.rs, genesis.rs, time.rs, notifications.rs, cheats.rs}`
 
 快速链接：
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/executor.rs
-- https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/db.rs
+- 源码（executor）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/executor.rs
+- 源码（db）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/db.rs
 - 执行：`executor.rs`
 - 状态：`db.rs` + `env.rs`
 - 校验：`validate.rs`
 - 初始化：`genesis.rs`
 - 时间/通知：`time.rs`、`notifications.rs`
 - 分叉：`fork.rs`（与 fork 章节联动）
-
-快速跳转：
-- EVM 适配：`/anvil/evm/evm-adapter`
-- 分叉与快照：`/anvil/fork/fork-and-snapshot`
-- 交易池/出块：`/anvil/txpool/design`、`/anvil/txpool/miner`
-- 可观测性：`/anvil/observability/errors-and-logging`

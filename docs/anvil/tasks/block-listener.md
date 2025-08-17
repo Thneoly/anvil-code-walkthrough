@@ -14,8 +14,3 @@ upstream_path: crates/anvil/src/tasks/block_listener.rs
 - 源码：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/tasks/block_listener.rs
 - 整体任务：`src/tasks/mod.rs`
 - 事件：`src/pubsub.rs`
-
-快速跳转：
-- 事件与订阅：`/anvil/pubsub/events`
-- 过滤器：`/anvil/architecture/filter`
-- 后台任务索引：`/anvil/tasks`

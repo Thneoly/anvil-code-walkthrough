@@ -11,9 +11,3 @@ upstream_path: crates/anvil/src/eth/pool/
 快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/pool/mod.rs
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/miner.rs
-
-快速跳转：
-- 池实现：`src/eth/pool/{mod.rs, transactions.rs}`
-- 打包：`src/eth/miner.rs`
-- 费用：`src/eth/fees.rs`
-- 测试示例：`crates/anvil/tests/it/txpool.rs`

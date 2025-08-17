@@ -18,8 +18,3 @@ upstream_path: crates/anvil/src/config.rs
 后续补充：
 - 配置结构图（Mermaid）与关键字段说明
 - CLI 参数到配置对象的映射表
-
-快速跳转：
-- CLI 参数：`/anvil/config/cli`
-- 服务装配：`/anvil/architecture/lifecycle`
-- FAQ：`/anvil/troubleshooting/faq`

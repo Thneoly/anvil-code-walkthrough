@@ -14,8 +14,3 @@ upstream_path: crates/anvil/src/
 快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/pubsub.rs
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/server/src/pubsub.rs
-
-快速跳转：
-- 过滤器：`/anvil/architecture/filter`
-- Backend 日志：`/anvil/evm/backend`
-- 传输入口：`/anvil/architecture/transport`

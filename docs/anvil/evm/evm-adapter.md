@@ -10,8 +10,3 @@ upstream_path: crates/anvil/src/evm.rs
 
 快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/evm.rs
-
-快速跳转：
-- Backend/DB：`/anvil/evm/backend`
-- 硬分叉：`/anvil/txpool/fees-hardfork`
-- API：`/anvil/overview` → `src/eth/api.rs`
