@@ -5,7 +5,6 @@
 ## ✅ 确认原则
 
 - 以源码为准：严格参照 `ref/foundry-575bf62c/crates/anvil` 中的实际目录与文件。
-- 不引入不存在的模块名（如 server.rs / methods.rs 等虚构命名）。
 - 逐文件分析：先画结构图，再讲实现与调用关系。
 - 文档框架：使用 Docusaurus（v3），在本仓库中组织发布。
 
