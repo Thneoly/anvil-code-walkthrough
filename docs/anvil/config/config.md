@@ -8,7 +8,7 @@ upstream_repo: foundry-rs/foundry
 upstream_path: crates/anvil/src/config.rs
 ---
 
-目标：概览 `src/config.rs` 的配置结构、默认策略与消费方式（在 `service.rs` 中的使用）。
+概述：`src/config.rs` 定义运行期配置与默认策略，并在 `service.rs` 中被消费以装配服务。
 
 快速链接：
 - 源码：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/config.rs
@@ -18,3 +18,8 @@ upstream_path: crates/anvil/src/config.rs
 后续补充：
 - 配置结构图（Mermaid）与关键字段说明
 - CLI 参数到配置对象的映射表
+
+快速跳转：
+- CLI 参数：`/anvil/config/cli`
+- 服务装配：`/anvil/architecture/lifecycle`
+- FAQ：`/anvil/troubleshooting/faq`

@@ -18,3 +18,8 @@ upstream_path: crates/anvil/src/filter.rs
 后续补充：
 - 生命周期与数据结构图（Mermaid）
 - 安装/匹配/查询的边界条件与性能要点
+
+快速跳转：
+- 事件与订阅：`/anvil/pubsub/events`
+- 执行与日志：`/anvil/evm/backend`
+- 传输入口：`/anvil/architecture/transport`

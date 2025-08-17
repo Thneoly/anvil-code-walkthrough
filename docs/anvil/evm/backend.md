@@ -17,3 +17,9 @@ upstream_path: crates/anvil/src/eth/backend/
 - 初始化：`genesis.rs`
 - 时间/通知：`time.rs`、`notifications.rs`
 - 分叉：`fork.rs`（与 fork 章节联动）
+
+快速跳转：
+- EVM 适配：`/anvil/evm/evm-adapter`
+- 分叉与快照：`/anvil/fork/fork-and-snapshot`
+- 交易池/出块：`/anvil/txpool/design`、`/anvil/txpool/miner`
+- 可观测性：`/anvil/observability/errors-and-logging`

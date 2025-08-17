@@ -18,3 +18,8 @@ upstream_path: crates/anvil/src/eth/fees.rs
 
 后续补充：
 - 各 EIP 的关键规则与对打包/费用的影响
+
+快速跳转：
+- 出块与矿工：`/anvil/txpool/miner`
+- 交易池设计：`/anvil/txpool/design`
+- 硬分叉回源：`/anvil/fork/fork-and-snapshot`

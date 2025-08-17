@@ -6,7 +6,12 @@ upstream_repo: foundry-rs/foundry
 upstream_path: crates/anvil/src/evm.rs
 ---
 
-`src/evm.rs` 与 Backend 的关系：如何执行交易、读写状态、处理硬分叉条件（`src/hardfork.rs`）。
+概述：`src/evm.rs` 承上启下，桥接 API 与 Backend，负责交易执行、状态访问与硬分叉条件的衔接（`src/hardfork.rs`）。
 
 快速链接：
 - https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/evm.rs
+
+快速跳转：
+- Backend/DB：`/anvil/evm/backend`
+- 硬分叉：`/anvil/txpool/fees-hardfork`
+- API：`/anvil/overview` → `src/eth/api.rs`

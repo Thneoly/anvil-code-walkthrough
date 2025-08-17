@@ -8,6 +8,7 @@ upstream_repo: foundry-rs/foundry
 upstream_path: crates/anvil/src/
 ---
 
+概述：统一梳理各层错误映射与日志策略，提供排错定位建议。
 快速链接：
 - 传输错误：`server/error.rs`
 - RPC 错误：`rpc/error.rs`
@@ -17,3 +18,8 @@ upstream_path: crates/anvil/src/
 后续补充：
 - 统一错误码映射表
 - 建议的 debug 日志埋点
+
+快速跳转：
+- 传输入口：`/anvil/architecture/transport`
+- RPC 类型：`/anvil/architecture/rpc-types`
+- FAQ：`/anvil/troubleshooting/faq`

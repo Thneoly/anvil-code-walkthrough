@@ -14,3 +14,8 @@ upstream_path: crates/anvil/src/eth/sign.rs
 - 源码：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/sign.rs
 - 相关：`src/eth/api.rs`, `src/eth/pool/*`
 - 测试：`crates/anvil/tests/it/{transaction.rs,api.rs}`
+
+快速跳转：
+- 交易池：`/anvil/txpool/design`
+- 出块：`/anvil/txpool/miner`
+- API：`/anvil/overview` → `src/eth/api.rs`
