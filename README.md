@@ -4,6 +4,8 @@
 
 在线访问：https://thneoly.github.io/anvil-code-walkthrough/
 
+English README: ./README.en.md
+
 基于 Docusaurus 的在线文档项目，聚焦对 foundry-rs/foundry 仓库中 `crates/anvil` 的核心源码进行结构化解析与讲解，帮助读者从源码层面深入理解 Anvil 的设计与实现。
 
 ## ✅ 确认原则
