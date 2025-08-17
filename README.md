@@ -1,5 +1,9 @@
 # Anvil Code Walkthrough
 
+[![Deploy Docusaurus to GitHub Pages](https://github.com/Thneoly/anvil-code-walkthrough/actions/workflows/deploy.yml/badge.svg)](https://github.com/Thneoly/anvil-code-walkthrough/actions/workflows/deploy.yml)
+
+在线访问：https://thneoly.github.io/anvil-code-walkthrough/
+
 基于 Docusaurus 的在线文档项目，聚焦对 foundry-rs/foundry 仓库中 `crates/anvil` 的核心源码进行结构化解析与讲解，帮助读者从源码层面深入理解 Anvil 的设计与实现。
 
 ## ✅ 确认原则
