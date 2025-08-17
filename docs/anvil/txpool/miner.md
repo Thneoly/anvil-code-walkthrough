@@ -20,11 +20,11 @@ upstream_path: crates/anvil/src/eth/miner.rs
 
 ```mermaid
 flowchart TD
-	A[触发: auto/手动/interval] --> B[选择候选交易]
+	A["触发: auto/手动/interval"] --> B[选择候选交易]
 	B --> C{按 gasLimit 打包}
-	C -->|ok| D[执行交易 -> 收据/日志]
-	D --> E[更新状态/推进头]
-	E --> F[通知订阅/写入索引]
+	C -->|ok| D["执行交易 -> 收据/日志"]
+	D --> E["更新状态/推进头"]
+	E --> F["通知订阅/写入索引"]
 	C -->|满| G[出块完成]
 ```
 

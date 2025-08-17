@@ -22,11 +22,12 @@ upstream_path: crates/anvil/
 ```mermaid
 flowchart LR
   A[入口] --> B[关键模块]
-  B --> C[依赖/数据流]
+  B --> C["依赖/数据流"]
 ```
 
 ## 一图胜千言
 - 放关键数据流/时序图（配方法名/文件路径）。
+- Mermaid 注意：节点/参与者标签若包含括号、斜杠、逗号或冒号，请用双引号包裹，例如 ["DB/Fork"]、participant API as "src/eth/api.rs"；否则会触发解析错误。
 
 ## 逐步走读
 - 入口 → 关键函数/类型 → 数据结构 → 边界条件（空值/大输入/权限/超时/并发）。

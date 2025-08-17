@@ -75,7 +75,7 @@ upstream_path: crates/anvil/src/
 
 ```mermaid
 flowchart TD
-		subgraph CLI[CLI/配置]
+		subgraph CLI["CLI/配置"]
 			OPTS[opts.rs]
 			ARGS[args.rs]
 			CMD[cmd.rs]
@@ -84,24 +84,24 @@ flowchart TD
 
 		subgraph Service[Service 装配]
 			SVC[service.rs]
-			DB[backend/db.rs]
-			EX[backend/executor.rs]
+			DB["backend/db.rs"]
+			EX["backend/executor.rs"]
 			EVM[evm.rs]
-			POOL[eth/pool/*]
-			MINER[eth/miner.rs]
+			POOL["eth/pool/*"]
+			MINER["eth/miner.rs"]
 			F[filter.rs]
 			PUB[pubsub.rs]
 		end
 
 		subgraph Transport[传输层]
-			H[server/handler.rs]
-			WS[server/ws.rs]
-			IPC[server/ipc.rs]
+			H["server/handler.rs"]
+			WS["server/ws.rs"]
+			IPC["server/ipc.rs"]
 		end
 
 		subgraph Runtime[运行]
-			TASK[tasks/block_listener.rs]
-			TIME[backend/time.rs]
+			TASK["tasks/block_listener.rs"]
+			TIME["backend/time.rs"]
 			LOG[logging.rs]
 		end
 

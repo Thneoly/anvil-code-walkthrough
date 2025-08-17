@@ -26,13 +26,13 @@ upstream_path: crates/anvil/server/src/
 ```mermaid
 flowchart LR
 	subgraph Transport[传输层]
-		WS[server/ws.rs]
-		IPC[server/ipc.rs]
-		H[server/handler.rs]
+		WS["server/ws.rs"]
+		IPC["server/ipc.rs"]
+		H["server/handler.rs"]
 	end
 	subgraph API[业务]
-		ETH[src/eth/api.rs]
-		PUB[src/pubsub.rs]
+		ETH["src/eth/api.rs"]
+		PUB["src/pubsub.rs"]
 	end
 	WS --> H
 	IPC --> H

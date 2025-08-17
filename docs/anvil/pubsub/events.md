@@ -23,10 +23,10 @@ upstream_path: crates/anvil/src/
 
 ```mermaid
 flowchart LR
-	A[Notifications] --> B[pubsub core]
-	B --> C{match topic/filter}
+	A[Notifications] --> B["pubsub core"]
+	B --> C{"match topic/filter"}
 	C -->|ok| D[fanout]
-	D --> E[WS/IPC clients]
+	D --> E["WS/IPC clients"]
 	C -->|miss| F[drop]
 ```
 

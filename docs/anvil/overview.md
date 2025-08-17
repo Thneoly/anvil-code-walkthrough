@@ -20,24 +20,24 @@ flowchart LR
 		IPC[IPC]
 	end
 	subgraph RPC[RPC Handler]
-		H[server/handler]
+		H["server/handler"]
 	end
 	subgraph API[以太坊 API]
-		A[src/eth/api.rs]
-		F[src/filter.rs]
-		P[src/pubsub.rs]
+		A["src/eth/api.rs"]
+		F["src/filter.rs"]
+		P["src/pubsub.rs"]
 	end
 	subgraph Backend[EVM 执行与状态]
-		EX[src/eth/backend/executor.rs]
-		DB[src/eth/backend/db.rs]
-		ENV[src/eth/backend/env.rs]
-		FK[src/eth/backend/fork.rs]
-		ST[mem/*]
+		EX["src/eth/backend/executor.rs"]
+		DB["src/eth/backend/db.rs"]
+		ENV["src/eth/backend/env.rs"]
+		FK["src/eth/backend/fork.rs"]
+		ST["mem/*"]
 	end
 	subgraph Tx[交易与出块]
-		POOL[src/eth/pool/*]
-		MINER[src/eth/miner.rs]
-		FEES[src/eth/fees.rs]
+		POOL["src/eth/pool/*"]
+		MINER["src/eth/miner.rs"]
+		FEES["src/eth/fees.rs"]
 	end
 
 	WS --> H

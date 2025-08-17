@@ -38,7 +38,7 @@ flowchart LR
 	C -->|err| E[Error]
 	D --> F[WriteSet]
 	F --> G[DB Commit]
-	G --> H[Receipts/Logs]
+	G --> H["Receipts/Logs"]
 	D --> I[Notifications]
 	B -. read .-> J[DB]
 	J -. miss .-> K[Fork Provider]

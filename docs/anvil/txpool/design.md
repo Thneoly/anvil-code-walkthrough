@@ -22,9 +22,9 @@ upstream_path: crates/anvil/src/eth/pool/
 flowchart LR
 	A[RPC sendRawTransaction] --> B[入池校验]
 	B -->|ok| C{去重/替换}
-	C -->|new| D[(按账户nonce插入)]
-	D --> E[Pending/Queued 队列]
-	E --> F[通知矿工/WS]
+	C -->|new| D[(按账户 nonce 插入)]
+	D --> E["Pending/Queued 队列"]
+	E --> F["通知矿工/WS"]
 	B -->|err| G[拒绝并返回错误]
 ```
 

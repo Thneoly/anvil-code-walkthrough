@@ -21,13 +21,13 @@ upstream_path: crates/anvil/src/filter.rs
 ```mermaid
 flowchart LR
 	A[安装 InstallFilter] --> B[注册到 FilterSet]
-	B --> C[建立索引/参数校验]
+	B --> C["建立索引/参数校验"]
 	C --> D{查询方式}
 	D -->|poll| E[eth_getFilterChanges]
 	D -->|query| F[eth_getLogs]
-	B --> G[事件来源: Receipts/Logs]
+	B --> G["事件来源: Receipts/Logs"]
 	G --> H["匹配器 match(topics, address, range)"]
-	H --> I[结果缓存/游标]
+	H --> I["结果缓存/游标"]
 ```
 
 - 过滤器参数：地址集合、主题（topic0..3，每位可多取 OR，位置之间 AND）、区块范围（from/to 或 blockHash）。
