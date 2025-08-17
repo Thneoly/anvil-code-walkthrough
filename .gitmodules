@@ -1,0 +1,3 @@
+[submodule "ref/foundry-575bf62c"]
+	path = ref/foundry-575bf62c
+	url = https://github.com/foundry-rs/foundry.git
