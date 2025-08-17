@@ -20,10 +20,10 @@ upstream_path: crates/anvil/src/evm.rs
 
 ```mermaid
 sequenceDiagram
-	participant API as RPC API
+	participant API as "RPC API"
 	participant E as EvmAdapter
 	participant X as Executor
-	participant D as DB/Fork
+	participant D as "DB/Fork"
 	API->>E: call/tx
 	E->>X: pre-validate + execute
 	X->>D: read state

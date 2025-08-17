@@ -45,10 +45,10 @@ flowchart LR
 ```mermaid
 sequenceDiagram
 	participant C as Client
-	participant WS as WS/IP C Server
+	participant WS as "WS/IPC Server"
 	participant H as Handler
-	participant API as src/eth/api.rs
-	participant EX as backend/executor
+	participant API as "src/eth/api.rs"
+	participant EX as "backend/executor"
 	C->>WS: JSON-RPC request
 	WS->>H: 读取帧/消息并解码
 	H->>API: 方法路由（eth_*, net_*, web3_*）
