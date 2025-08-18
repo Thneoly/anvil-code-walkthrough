@@ -28,12 +28,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Debug ref tree
-        run: |
-          echo "PWD=$(pwd)" && ls -la
-          echo "ref/ summary:" && (test -d ref && find ref -maxdepth 4 -type d -print | sed -n '1,120p' || echo 'ref/ not found')
-          test -f ref/foundry-575bf62c/crates/anvil/src/eth/fees.rs && echo "OK: fees.rs found" || echo "MISSING: fees.rs"
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
