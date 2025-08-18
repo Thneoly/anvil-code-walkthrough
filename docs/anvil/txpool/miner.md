@@ -14,7 +14,7 @@ upstream_path: crates/anvil/src/eth/miner.rs
 - 源码（miner）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/miner.rs
 - 源码（pool）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/pool/mod.rs
 - 相关：`src/eth/backend/executor.rs`
-- 测试：`crates/anvil/tests/it/{transaction.rs,txpool.rs,logs.rs}`
+- 测试：`crates/anvil/tests/it/transaction.rs`、`crates/anvil/tests/it/txpool.rs`、`crates/anvil/tests/it/logs.rs`
 
 ## 出块流程
 

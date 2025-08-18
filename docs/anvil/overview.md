@@ -57,14 +57,14 @@ flowchart LR
 快速验证：见 示例 → curl: eth_chainId。
 
 后续章节将逐一映射到真实源码目录：
-- 配置与启动：`src/{config.rs, opts.rs, args.rs, cmd.rs, service.rs, shutdown.rs, logging.rs}`
+- 配置与启动：`src/config.rs`、`src/opts.rs`、`src/args.rs`、`src/cmd.rs`、`src/service.rs`、`src/shutdown.rs`、`src/logging.rs`
 - 架构（生命周期/传输/RPC 类型）：
-	- 传输/请求入口：`server/src/*` 与 `src/server/*`
+	- 传输/请求入口：`server/src/handler.rs`、`server/src/ws.rs`、`server/src/ipc.rs` 与 `src/server/mod.rs`、`src/server/handler.rs`
 	- RPC 类型：`rpc/src/*`
 - EVM 与状态：`src/evm.rs` 与 `src/eth/backend/*`
 - 交易池：`src/eth/pool/*`
 - 分叉与快照：`src/eth/backend/fork.rs` + `src/eth/api.rs`
-- 发布-订阅：`src/pubsub.rs` + `src/eth/backend/notifications.rs`
+	- 发布-订阅：`src/pubsub.rs`、`src/eth/backend/notifications.rs`
 - 账户与签名：`src/eth/sign.rs`
 - 后台任务：`src/tasks/*`
 - 可观测性：`src/logging.rs`、`rpc/src/error.rs`、`server/src/error.rs`、`src/eth/error.rs`

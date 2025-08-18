@@ -8,8 +8,8 @@ upstream_path: crates/anvil/server/src/
 
 概述：对比独立 `server/` 子 crate 与 `src/server/` 内部模块，说明连接/会话、编解码与方法路由的衔接方式。
 
-- 独立 crate：`server/src/{lib.rs, handler.rs, config.rs, ws.rs, ipc.rs, pubsub.rs, error.rs}`
-- 内部模块：`src/server/{mod.rs, handler.rs, error.rs}`
+- 独立 crate：`server/src/lib.rs`、`server/src/handler.rs`、`server/src/config.rs`、`server/src/ws.rs`、`server/src/ipc.rs`、`server/src/pubsub.rs`、`server/src/error.rs`
+- 内部模块：`src/server/mod.rs`、`src/server/handler.rs`、`src/server/error.rs`
 - 关系：传输适配、路由入口、与 API 层的衔接
 
 快速链接：
@@ -77,7 +77,7 @@ sequenceDiagram
 
 ## 测试与排错
 
-- 端到端：`crates/anvil/tests/it/{wsapi.rs, api.rs}` 可作为请求/订阅的可运行样例。
+- 端到端：`crates/anvil/tests/it/wsapi.rs`、`crates/anvil/tests/it/api.rs` 可作为请求/订阅的可运行样例。
 - 日志排查：关注 `src/logging.rs` 的连接生命周期与错误日志；必要时调高日志级别。
 
 后续补充：

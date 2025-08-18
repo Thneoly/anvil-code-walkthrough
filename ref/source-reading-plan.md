@@ -61,7 +61,7 @@ slug: /anvil/source-reading-plan
   - 订阅/广播：`crates/anvil/src/pubsub.rs`
   - 日志初始化与级别：`crates/anvil/src/logging.rs`
 
-- 6. 实战与扩展（docs/anvil/advanced-and-ext.md）
+- 6. 实战与扩展（已拆分为分组 docs/anvil/advanced/*）
   - 扩展新 RPC/后端/任务（练习：实现一个自定义 RPC）
   - 三条典型时序图深挖：getBalance / sendRawTx / eth_call & trace（`src/eth/api.rs` 及后端路径对照）
   - 常见坑与优化：并发、背压、内存、回源策略

@@ -109,6 +109,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // Docs sidebar behavior
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
     // Enable Algolia DocSearch only when env vars are provided
     ...(hasAlgolia
       ? {

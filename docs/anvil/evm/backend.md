@@ -6,7 +6,7 @@ upstream_repo: foundry-rs/foundry
 upstream_path: crates/anvil/src/eth/backend/
 ---
 
-`src/eth/backend/{fork.rs, executor.rs, db.rs, env.rs, validate.rs, genesis.rs, time.rs, notifications.rs, cheats.rs}`
+`src/eth/backend/fork.rs`、`src/eth/backend/executor.rs`、`src/eth/backend/db.rs`、`src/eth/backend/env.rs`、`src/eth/backend/validate.rs`、`src/eth/backend/genesis.rs`、`src/eth/backend/time.rs`、`src/eth/backend/notifications.rs`、`src/eth/backend/cheats.rs`
 
 快速链接：
 - 源码（executor）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/backend/executor.rs

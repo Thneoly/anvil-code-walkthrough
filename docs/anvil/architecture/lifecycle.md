@@ -16,7 +16,7 @@ upstream_path: crates/anvil/src/
 
 1) 解析参数/环境
 	 - 入口（CLI）：`crates/anvil/bin/main.rs`
-	 - 参数解析：`src/{opts.rs, args.rs, cmd.rs}`
+	 - 参数解析：`src/opts.rs`、`src/args.rs`、`src/cmd.rs`
 	 - 生成运行配置：`src/config.rs`
 	 - 参考章节：配置系统与 CLI（见 `../config/config`、`../config/cli`）
 
@@ -29,7 +29,7 @@ upstream_path: crates/anvil/src/
 	 - 代码路径：`src/service.rs`（集中装配、依赖注入、资源持有与 drop 顺序）
 
 4) 启动传输与 RPC 入口
-	 - 传输层：`server/src/{handler.rs, ws.rs, ipc.rs}` 与 `src/server/{mod.rs, handler.rs}`
+	 - 传输层：`server/src/handler.rs`、`server/src/ws.rs`、`server/src/ipc.rs` 与 `src/server/mod.rs`、`src/server/handler.rs`
 	 - RPC 类型：`rpc/src/*`（请求/响应模型与错误）
 	 - 参考章节：传输层与请求入口、RPC 类型（见 `../architecture/transport`、`../architecture/rpc-types`）
 
@@ -55,7 +55,7 @@ upstream_path: crates/anvil/src/
 
 ## 关键模块与职责
 
-- 入口与参数：`bin/main.rs`、`src/{opts.rs, args.rs, cmd.rs}`（解析、子命令、默认值）
+- 入口与参数：`bin/main.rs`、`src/opts.rs`、`src/args.rs`、`src/cmd.rs`（解析、子命令、默认值）
 - 配置：`src/config.rs`（运行期配置体、默认策略、与 CLI 的映射）
 - 服务装配：`src/service.rs`（核心依赖装配、生命周期拥有者）
 - 传输与路由：`server/src/*`、`src/server/*`（连接、编解码、方法路由）

@@ -28,3 +28,44 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Sidebar UI polish: smaller, cleaner collapse/caret icons */
+/* 1) Reduce category caret icon size globally (used in sidebar) */
+:root {
+  /* default is ~1.25rem in Infima; make it slightly smaller */
+  --ifm-menu-link-sublist-icon-size: 0.95rem;
+}
+
+/* 2) Tweak the global sidebar collapse button (bottom of sidebar) */
+.theme-doc-sidebar-container .button[class*='collapseSidebarButton'] {
+  /* keep compact but ensure enough space to avoid clipping */
+  --ifm-button-padding-vertical: 0.25rem;
+  --ifm-button-padding-horizontal: 0.45rem;
+  border-radius: 6px;
+  line-height: 1; /* prevent extra vertical cropping */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px; /* guarantee room for the icon */
+  opacity: 0.85;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.theme-doc-sidebar-container .button[class*='collapseSidebarButton']:hover {
+  opacity: 1;
+  transform: translateX(-1px);
+}
+.theme-doc-sidebar-container .button[class*='collapseSidebarButton'] svg {
+  /* smaller than default, but large enough to render fully */
+  width: 16px;
+  height: 16px;
+  overflow: visible;
+}
+/* soften the icon color (override inline fills) */
+.theme-doc-sidebar-container .button[class*='collapseSidebarButton'] svg * {
+  fill: var(--ifm-color-emphasis-600) !important;
+}
+
+/* 3) Slightly tighten caret button spacing */
+.menu__list .menu__caret {
+  margin-left: 0.25rem;
+}

@@ -21,7 +21,8 @@
     "ref:update": "bash scripts/update-ref.sh",
     "links:check": "node scripts/check-links.mjs",
     "mermaid:check": "node scripts/check-mermaid-labels.mjs",
-    "check": "npm run -s mermaid:check && npm run -s links:check"
+    "bracepaths:check": "node scripts/check-brace-paths.mjs",
+    "check": "npm run -s mermaid:check && npm run -s links:check && npm run -s bracepaths:check"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",

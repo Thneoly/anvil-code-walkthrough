@@ -14,7 +14,7 @@ upstream_path: crates/anvil/src/eth/fees.rs
 - 源码（fees）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/eth/fees.rs
 - 源码（hardfork）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/hardfork.rs
 - 相关：`src/eth/miner.rs`、`src/eth/backend/validate.rs`
-- 测试：`crates/anvil/tests/it/{eip4844.rs,eip7702.rs,gas.rs}`
+- 测试：`crates/anvil/tests/it/eip4844.rs`、`crates/anvil/tests/it/eip7702.rs`、`crates/anvil/tests/it/gas.rs`
 
 ## 关键规则速览
 

@@ -14,7 +14,7 @@ upstream_path: crates/anvil/src/filter.rs
 - 源码（filter）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/filter.rs
 - 源码（pubsub）：https://github.com/foundry-rs/foundry/blob/575bf62c/crates/anvil/src/pubsub.rs
 - 相关：`eth/backend/executor.rs` 日志产生
-- 测试：`crates/anvil/tests/it/{logs.rs,pubsub.rs}`
+- 测试：`crates/anvil/tests/it/logs.rs`、`crates/anvil/tests/it/pubsub.rs`
 
 ## 模型与生命周期
 
