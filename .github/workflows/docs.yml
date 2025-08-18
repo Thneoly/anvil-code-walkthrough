@@ -24,6 +24,6 @@ jobs:
       - name: Check brace-grouped paths
         run: npm run -s bracepaths:check
       - name: Check links (non-blocking)
-        run: npm run -s links:check || true
+        run: STRICT_LINKS=0 npm run -s links:check || true
       - name: Build site (don't fail on broken links)
         run: STRICT_LINKS=0 npm run -s build

@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
+const STRICT = !['0','false','off','no'].includes(String(process.env.STRICT_LINKS || '').toLowerCase());
 const DOCS_DIR = path.join(ROOT, 'docs', 'anvil');
 const REF_DIR = path.join(ROOT, 'ref');
 
@@ -48,7 +49,12 @@ async function checkFile(file) {
       console.error(`Broken refs (count=${failures.length}):`);
       console.error(`Resolved ROOT: ${ROOT}`);
       for (const f of failures) console.error(' -', f);
-      process.exitCode = 1;
+      if (STRICT) {
+        process.exitCode = 1;
+      } else {
+        console.error('[links:check] STRICT_LINKS=0 => not failing the build');
+        process.exitCode = 0;
+      }
     } else {
       console.log('All source refs OK');
     }
