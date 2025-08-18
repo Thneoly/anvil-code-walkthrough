@@ -11,6 +11,8 @@ const hasAlgolia = Boolean(appId && apiKey && indexName);
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const strictLinks = !['0', 'false', 'off', 'no'].includes(String(process.env.STRICT_LINKS || '').toLowerCase());
+
 const config: Config = {
   title: 'Anvil 源码导读',
   tagline: '基于 foundry crates/anvil 的结构化解析',
@@ -33,7 +35,8 @@ const config: Config = {
   organizationName: 'Thneoly', // GitHub 用户名/组织
   projectName: 'anvil-code-walkthrough', // 仓库名
 
-  onBrokenLinks: 'throw',
+  // Allow downgrading link breaks to warnings via env in CI: STRICT_LINKS=0
+  onBrokenLinks: strictLinks ? 'throw' : 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
