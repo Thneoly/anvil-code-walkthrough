@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Debug ref tree
+        run: |
+          echo "PWD=$(pwd)" && ls -la
+          echo "ref/ summary:" && (test -d ref && find ref -maxdepth 3 -type d -print | sed -n '1,80p' || echo 'ref/ not found')
       - name: Use Node
         uses: actions/setup-node@v4
         with:
