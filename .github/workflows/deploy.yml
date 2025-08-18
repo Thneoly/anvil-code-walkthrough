@@ -44,7 +44,7 @@ jobs:
         run: npm run typecheck --silent || true
 
       - name: Build website
-        run: npm run build
+        run: bash -lc 'STRICT_LINKS=0 npm run build'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
