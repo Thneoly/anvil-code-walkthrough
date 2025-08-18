@@ -15,7 +15,10 @@ Q: Fork 模式下数据为何“变化”了？
 - 若未固定 `--fork-block-number`，上游会推进；固定高度或启用 cache-only 读取。参见：ref/foundry-575bf62c/crates/anvil/src/eth/backend/fork.rs。
 
 Q: 交易入池被拒绝的常见原因？
-- nonce 过旧/过大、费用不足（baseFee/priorityFee）、签名或链 ID 不匹配、触发规则限制（如 7702 授权）。参见：ref/foundry-575bf62c/crates/anvil/src/eth/{fees.rs,miner.rs,sign.rs}。
+- nonce 过旧/过大、费用不足（baseFee/priorityFee）、签名或链 ID 不匹配、触发规则限制（如 7702 授权）。参见：
+	- ref/foundry-575bf62c/crates/anvil/src/eth/fees.rs
+	- ref/foundry-575bf62c/crates/anvil/src/eth/miner.rs
+	- ref/foundry-575bf62c/crates/anvil/src/eth/sign.rs
 
 Q: 如何定位 JSON-RPC 错误？
 - 查看错误 code 与 data，上下文中含 method/hash/高度等；必要时开启 debug 日志。参见：ref/foundry-575bf62c/crates/anvil/rpc/src/error.rs。
@@ -34,7 +37,8 @@ Q: 如何快速确认链路是否通？
 - 并发与背压
 
 快速链接：
-- `src/eth/miner.rs`, `src/eth/fees.rs`
-- `src/eth/backend/mem/fork_db.rs`
-- `src/eth/pool/*`
-- `server/src/*`
+- ref/foundry-575bf62c/crates/anvil/src/eth/miner.rs
+- ref/foundry-575bf62c/crates/anvil/src/eth/fees.rs
+- ref/foundry-575bf62c/crates/anvil/src/eth/backend/mem/fork_db.rs
+- ref/foundry-575bf62c/crates/anvil/src/eth/pool/
+- ref/foundry-575bf62c/crates/anvil/src/server/
