@@ -13,6 +13,8 @@ on:
       - "package.json"
       - "package-lock.json"
       - "scripts/**"
+      - "ref/**"
+      - ".gitmodules"
       - ".github/workflows/ci.yml"
 
 permissions:
@@ -40,11 +42,11 @@ jobs:
       - name: Typecheck
         run: npm run typecheck --silent || true
 
-      - name: Check links
-        run: STRICT_LINKS=0 npm run links:check || true
+      - name: Check links (strict)
+        run: npm run links:check
 
-      - name: Build website (don't fail on link breaks in CI)
-        run: STRICT_LINKS=0 npm run build
+      - name: Build website
+        run: npm run build
 
       - name: (Optional) Smoke test curl example
         if: ${{ github.event_name == 'push' }}
