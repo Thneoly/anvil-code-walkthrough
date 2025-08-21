@@ -26,7 +26,7 @@ jobs:
         run: npm run -s mermaid:check
       - name: Check brace-grouped paths
         run: npm run -s bracepaths:check
-      - name: Check links (non-blocking)
-        run: STRICT_LINKS=0 npm run -s links:check || true
-      - name: Build site (don't fail on broken links)
-        run: STRICT_LINKS=0 npm run -s build
+      - name: Check links
+        run: npm run -s links:check
+      - name: Build site
+        run: npm run -s build
